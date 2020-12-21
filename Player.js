@@ -10,7 +10,7 @@ class Player {
       var playerCountRef = database.ref(`users/${word}/`);
       playerCountRef.on("value",(data)=>{
         playerCount = data.val();
-      })
+      });
     }
   
     updateCount(count){

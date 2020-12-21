@@ -76,6 +76,7 @@ class Welcome {
         word=this.codeInput.value();
         console.log(word);
         this.updateEverything();
+        activeUser=0;
       }
     });
     this.genrateCodeButton.mousePressed(async () => {
@@ -89,6 +90,7 @@ class Welcome {
         this.code.show();
         gameState = 1;
         this.updateEverything();
+        activeUser=1;
       }
     });
 
