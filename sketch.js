@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 var gameState=0;
 var world,engine;
 var gameState = 0;
-var playerCount=0;
+var playerCount;
 var allPlayers;
 var distance = 0;
 var database;
@@ -48,7 +48,7 @@ function setup() {
 
 function draw(){
     if (gameState==0){
-        background('white');
+        background('#ffadad');
         welcome.display();
     }else if (gameState==2){
         background(bgImg);

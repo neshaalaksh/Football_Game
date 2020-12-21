@@ -7,28 +7,28 @@ class Player {
     }
   
     getCount(){
-      var playerCountRef = database.ref(`users/${word}`);
+      var playerCountRef = database.ref(`users/${word}/`);
       playerCountRef.on("value",(data)=>{
         playerCount = data.val();
       })
     }
   
     updateCount(count){
-      database.ref(`users/${word}`).update({
+      database.ref(`users/${word}/`).update({
         playerCount: count
       });
     }
   
     update(){
       var playerIndex = `users/${word}/player` + this.index;
-      database.ref(playerIndex).set({
+      database.ref(playerIndex).update({
         name:this.name,
         goal:this.goal
       });
     }
   
     static getPlayerInfo(){
-      var playerInfoRef = database.ref('users');
+      var playerInfoRef = database.ref(`users/${word}/`);
       playerInfoRef.on("value",(data)=>{
         allusers = data.val();
       })
